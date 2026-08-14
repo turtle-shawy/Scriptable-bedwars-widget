@@ -1,2 +1,2 @@
 # Scriptable-bedwars-widget
-Paste ur username and hypixel api key to make i work
+Put hypixel api key, username, and uuid in scriptablebedwars.js file
