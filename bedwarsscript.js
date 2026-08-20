@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
-const API_KEY = "PASTE_YOUR_PERMANENT_KEY_HERE"; // <--- Put your key here
-const USERNAME = "Players username"; 
-const UUID = "Players UUID"; 
+const API_KEY = "hypixel_api_key"; 
+const USERNAME = "fearedw"; 
+const UUID = "9bd5d4650a2f48a391390849f973b009"; 
 
 const FONT_NAME = "Minecraft"; 
 // ---------------------
@@ -25,7 +25,7 @@ if (fm.fileExists(cachePath)) {
   } catch (e) {}
 }
 
-// Fetch official live data using your permanent key
+// Fetch official live data using your key
 try {
   const reqPlayer = new Request(`https://api.hypixel.net/v2/player?uuid=${UUID}`);
   const reqGuild = new Request(`https://api.hypixel.net/v2/guild?player=${UUID}`);
@@ -69,7 +69,7 @@ try {
   // Save successful fetch locally
   fm.writeString(cachePath, JSON.stringify(statsData));
 } catch (e) {
-  // Uses cache if offline or temporary rate limit
+  // Uses cache if offline
 }
 
 const { stars, finalKills, finalDeaths, fkdr, rawRank, guildTag } = statsData;
